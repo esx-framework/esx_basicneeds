@@ -1,4 +1,4 @@
 Locales['nl'] = {
-    ['used_eat'] = 'je hebt 1x %s gegeten',
-    ['used_drink'] = 'je hebt 1x %s gedronken',
+    ['used_eat'] = 'je hebt een %s gegeten',
+    ['used_drink'] = 'je hebt een %s gedronken',
   }
