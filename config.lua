@@ -5,7 +5,7 @@ Config.Visible = true
 Config.Items = {
 	["bread"] = {
 		type = "food",
-		prop= "prop_cs_burger_01",
+		prop = "prop_cs_burger_01",
 		status = 200000,
 		remove = true
 	},
