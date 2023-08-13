@@ -72,16 +72,16 @@ AddEventHandler('esx_basicneeds:isEating', function(cb)
 end)
 
 RegisterNetEvent('esx_basicneeds:onUse')
-AddEventHandler('esx_basicneeds:onUse', function(type, prop_name)
+AddEventHandler('esx_basicneeds:onUse', function(type, prop_name, anim)
 	if not IsAnimated then
-		local anim = {dict = 'mp_player_inteat@burger', name = 'mp_player_int_eat_burger_fp', settings = {8.0, -8, -1, 49, 0, 0, 0, 0}}
+		local anim = anim
 		IsAnimated = true
 		if type == 'food' then
 			prop_name = prop_name or 'prop_cs_burger_01'
-			anim = {dict = 'mp_player_inteat@burger', name = 'mp_player_int_eat_burger_fp', settings = {8.0, -8, -1, 49, 0, 0, 0, 0}}
+			anim = anim
 		elseif type == 'drink' then
 			prop_name = prop_name or 'prop_ld_flow_bottle'
-			anim = {dict = 'mp_player_intdrink', name = 'loop_bottle', settings = {1.0, -1.0, 2000, 0, 1, true, true, true}}
+			anim = anim
 		end
 
 		CreateThread(function()

@@ -7,11 +7,11 @@ CreateThread(function()
 			end
 			if v.type == "food" then
 				TriggerClientEvent("esx_status:add", source, "hunger", v.status)
-				TriggerClientEvent('esx_basicneeds:onUse', source, v.type, v.prop)
+				TriggerClientEvent('esx_basicneeds:onUse', source, v.type, v.prop, v.anim)
 				xPlayer.showNotification(TranslateCap('used_food', ESX.GetItemLabel(k)))
 			elseif v.type == "drink" then
 				TriggerClientEvent("esx_status:add", source, "thirst", v.status)
-				TriggerClientEvent('esx_basicneeds:onUse', source, v.type, v.prop)
+				TriggerClientEvent('esx_basicneeds:onUse', source, v.type, v.prop, v.anim)
 				xPlayer.showNotification(TranslateCap('used_drink', ESX.GetItemLabel(k)))
 			else
 				print(string.format('^1[ERROR]^0 %s has no correct type defined.', k))
