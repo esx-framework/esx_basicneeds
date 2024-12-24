@@ -30,12 +30,11 @@ CreateThread(function()
 end)
 
 ESX.RegisterCommand('heal', 'admin', function(xPlayer, args, showError)
-    if args.playerId then
-        args.playerId.triggerEvent('esx_basicneeds:healPlayer')
-        args.playerId.showNotification(TranslateCap('got_healed'))
-    else
-        showError("Player ID is required.")
+    if not args.playerId then
+        return showError("Player ID is required")
     end
+    args.playerId.triggerEvent('esx_basicneeds:healPlayer')
+    args.playerId.showNotification(TranslateCap('got_healed'))
 end, true, {
     help = 'Heal a player, or yourself - restores thirst, hunger, and health.',
     validate = true,

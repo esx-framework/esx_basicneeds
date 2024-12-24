@@ -104,12 +104,10 @@ local function warnDeprecated(eventName, itemType, propName)
     TriggerEvent('esx_basicneeds:onUse', itemType, propName)
 end
 
-RegisterNetEvent('esx_basicneeds:onEat')
-AddEventHandler('esx_basicneeds:onEat', function(propName)
+RegisterNetEvent('esx_basicneeds:onEat', function(propName)
     warnDeprecated('esx_basicneeds:onEat', 'food', propName or 'prop_cs_burger_01')
 end)
 
-RegisterNetEvent('esx_basicneeds:onDrink')
 AddEventHandler('esx_basicneeds:onDrink', function(propName)
     warnDeprecated('esx_basicneeds:onDrink', 'drink', propName or 'prop_ld_flow_bottle')
 end)
