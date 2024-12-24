@@ -25,7 +25,7 @@ end)
 
 AddEventHandler('esx:onPlayerSpawn', function()
     if IsDead then
-        TriggerEvent('esx_basicneeds:resetStatus')
+		setPlayerNeeds(500000, 500000)
     end
     IsDead = false
 end)
