@@ -92,8 +92,7 @@ local function handleAnimation(itemType, propName, anim, pos, rot)
     end)
 end
 
-RegisterNetEvent('esx_basicneeds:onUse')
-AddEventHandler('esx_basicneeds:onUse', function(itemType, propName, anim, pos, rot)
+RegisterNetEvent('esx_basicneeds:onUse', function(itemType, propName, anim, pos, rot)
     propName = propName or (itemType == 'food' and 'prop_cs_burger_01' or 'prop_ld_flow_bottle')
     handleAnimation(itemType, propName, anim, pos, rot)
 end)
